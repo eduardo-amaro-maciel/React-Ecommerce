@@ -7,3 +7,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.hero-bg {
+  background-image: url("../assets/images/bghero.jpg");
+}
