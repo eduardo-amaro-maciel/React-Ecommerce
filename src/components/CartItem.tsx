@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io";
 
 import { CartContext } from "../contexts/CartContext";
+import { CartType } from "../contexts/CartContext";
 
-export function CartItem({ item }) {
+export function CartItem({ item }: { item: CartType }) {
   const { removeFromCart, increaseAmount, decreaseAmount } =
     useContext(CartContext);
   // destructure item
@@ -60,9 +61,9 @@ export function CartItem({ item }) {
               $ {price}
             </div>
             {/* final price */}
-            <div className="flex flex-1 justify-end items-center text-primary font-medium">{`$ ${parseFloat(
-              price * amount
-            ).toFixed(2)}`}</div>
+            <div className="flex flex-1 justify-end items-center text-primary font-medium">{`$ ${String(
+              (price * amount).toFixed(2)
+            )}`}</div>
           </div>
         </div>
       </div>

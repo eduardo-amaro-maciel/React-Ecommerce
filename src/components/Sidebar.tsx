@@ -37,7 +37,7 @@ export function Sidebar() {
           {/* total */}
           <div className="font-semibold">
             <span className="mr-2">Subtotal:</span> ${" "}
-            {parseFloat(total).toFixed(2)}
+            {parseFloat(String(total)).toFixed(2)}
           </div>
           {/* clear cart icon */}
           <div
